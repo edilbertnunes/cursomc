@@ -20,7 +20,7 @@ public class Categoria implements Serializable {
 	private Integer id;
 	private String nome;
 	
-	@ManyToMany(mappedBy="categorias")
+	@ManyToMany(mappedBy="categorias") // diz que o mapeamento foi feito no atributo categorias da classe Produto
 	private List<Produto> produtos = new ArrayList<>();
 	
 	public Categoria() {

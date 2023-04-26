@@ -26,8 +26,8 @@ public class Produto implements Serializable {
 	@ManyToMany
 	@JoinTable(name = "PRODUTO_CATEGORIA",
 	
-		joinColumns = @JoinColumn(name = "produto_id"),
-		inverseJoinColumns = @JoinColumn(name = "categoria_id")
+		joinColumns = @JoinColumn(name = "FK_produto_id"), // campo da chave estrangeira da tabela produto
+		inverseJoinColumns = @JoinColumn(name = "FK_categoria_id") // chave estrangeira que vai referenciar a categoria
 		)
 		private List<Categoria> categorias = new ArrayList<>();
 	
